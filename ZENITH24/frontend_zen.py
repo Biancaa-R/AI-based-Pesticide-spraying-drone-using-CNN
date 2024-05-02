@@ -16,24 +16,6 @@ def upload_image():
 def render_predict():
     return render_template("Predict.html")
 
-'''@app.route("/upload_image", methods=["POST"])
-def upload_file():
-    global fp,dis
-    if request.method == "POST":
-        uploaded_file = request.files["file"]
-        if uploaded_file.filename != '':
-            current_directory = os.getcwd()
-            print("cd is:",current_directory)
-            cd1=os.path.join(current_directory,'uploads')
-            cd2=os.path.join(cd1, uploaded_file.filename)
-            uploaded_file.save(cd2)
-            uploaded_file_path = os.path.abspath(cd2)
-            fp=str(uploaded_file_path)
-            print(fp)
-            l=loading(fp)
-            dis=l[0]
-            return render_template("Result.html")
-    return "Error! Uploading"'''
 @app.route("/upload_image", methods=["POST"])
 def upload_file():
     global fp,dis
