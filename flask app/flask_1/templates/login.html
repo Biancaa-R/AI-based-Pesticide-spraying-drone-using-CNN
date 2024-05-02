@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            <!--action is empty as after the posting it should return  to the same page -->
+            {{form.hidden_tag()}} <!--adds a csrf token-->
+            <!--cross site request forgery token.-->
+            <!--accessing the variables from the particular form instance-->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+
+                <div class="form-group">
+                    {{form.email.label(class="form-control-label")}}
+                    {% if form.email.errors %}
+                        {{form.email(class= "form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {%for error in form.email.errors%}
+                                <span> {{error}} </span>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                        {{form.email(class="form-control form-control-lg")}}<!--where lg=large-->
+                    {%endif%}
+                </div>
+                <div class="form-group">
+                    {{form.password.label(class="form-control-label")}}
+                    {%if form.password.errors %}
+                        {{form.password(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {%for error in form.password.errors%}
+                                <span> {{error }}</span>
+                            {%endfor%}
+                        </div>
+                    {%else%}
+                        {{form.password(class="form-control form-control-lg")}}<!--where lg=large-->
+                    {%endif%}
+
+                <small class="text-muted ml-2">
+                    <a href="#">Forgot password?</a>
+                </small>
+            </fieldset>
+            <div class="form-group">
+                {{form.submit(class="btn btn-outline-info")}} <!--Blue hallow-->
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted"> <!--small text-->
+            New user register? <a class="ml-2" href="{{url_for('register')}}"> <!--margin left of 2  * Name of the route function-->
+                Login
+            </a>
+        </small>
+    </div>
+{% endblock content %}

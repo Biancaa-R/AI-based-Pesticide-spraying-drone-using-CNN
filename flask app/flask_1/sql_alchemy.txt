@@ -1,0 +1,57 @@
+D:\>pip install SQLAlchemy
+Collecting SQLAlchemy
+  Obtaining dependency information for SQLAlchemy from https://files.pythonhosted.org/packages/83/34/e760f4e78b2aeb04a74ae7338f9c215570a256755ab0026336037ec8df75/SQLAlchemy-2.0.29-cp311-cp311-win_amd64.whl.metadata
+  Downloading SQLAlchemy-2.0.29-cp311-cp311-win_amd64.whl.metadata (9.8 kB)
+Requirement already satisfied: typing-extensions>=4.6.0 in d:\lib\site-packages (from SQLAlchemy) (4.7.1)
+Collecting greenlet!=0.4.17 (from SQLAlchemy)
+  Obtaining dependency information for greenlet!=0.4.17 from https://files.pythonhosted.org/packages/47/79/26d54d7d700ef65b689fc2665a40846d13e834da0486674a8d4f0f371a47/greenlet-3.0.3-cp311-cp311-win_amd64.whl.metadata
+  Downloading greenlet-3.0.3-cp311-cp311-win_amd64.whl.metadata (3.9 kB)
+Downloading SQLAlchemy-2.0.29-cp311-cp311-win_amd64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 1.5 MB/s eta 0:00:00
+Downloading greenlet-3.0.3-cp311-cp311-win_amd64.whl (292 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 292.8/292.8 kB 361.4 kB/s eta 0:00:00
+Installing collected packages: greenlet, SQLAlchemy
+Successfully installed SQLAlchemy-2.0.29 greenlet-3.0.3
+
+D:\>pip install flask-sqlalchemy
+Collecting flask-sqlalchemy
+  Obtaining dependency information for flask-sqlalchemy from https://files.pythonhosted.org/packages/1d/6a/89963a5c6ecf166e8be29e0d1bf6806051ee8fe6c82e232842e3aeac9204/flask_sqlalchemy-3.1.1-py3-none-any.whl.metadata
+  Downloading flask_sqlalchemy-3.1.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting flask>=2.2.5 (from flask-sqlalchemy)
+  Obtaining dependency information for flask>=2.2.5 from https://files.pythonhosted.org/packages/61/80/ffe1da13ad9300f87c93af113edd0638c75138c42a0994becfacac078c06/flask-3.0.3-py3-none-any.whl.metadata
+  Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: sqlalchemy>=2.0.16 in d:\lib\site-packages (from flask-sqlalchemy) (2.0.29)
+Collecting Werkzeug>=3.0.0 (from flask>=2.2.5->flask-sqlalchemy)
+  Obtaining dependency information for Werkzeug>=3.0.0 from https://files.pythonhosted.org/packages/e3/23/c9843d7550092ae7ad380611c238f44afef66f58f76c1dab7dcf313e4339/werkzeug-3.0.2-py3-none-any.whl.metadata
+  Downloading werkzeug-3.0.2-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: Jinja2>=3.1.2 in d:\lib\site-packages (from flask>=2.2.5->flask-sqlalchemy) (3.1.2)
+Requirement already satisfied: itsdangerous>=2.1.2 in d:\lib\site-packages (from flask>=2.2.5->flask-sqlalchemy) (2.1.2)
+Requirement already satisfied: click>=8.1.3 in d:\lib\site-packages (from flask>=2.2.5->flask-sqlalchemy) (8.1.3)
+Collecting blinker>=1.6.2 (from flask>=2.2.5->flask-sqlalchemy)
+  Obtaining dependency information for blinker>=1.6.2 from https://files.pythonhosted.org/packages/fa/2a/7f3714cbc6356a0efec525ce7a0613d581072ed6eb53eb7b9754f33db807/blinker-1.7.0-py3-none-any.whl.metadata
+  Using cached blinker-1.7.0-py3-none-any.whl.metadata (1.9 kB)
+Requirement already satisfied: typing-extensions>=4.6.0 in d:\lib\site-packages (from sqlalchemy>=2.0.16->flask-sqlalchemy) (4.7.1)
+Requirement already satisfied: greenlet!=0.4.17 in d:\lib\site-packages (from sqlalchemy>=2.0.16->flask-sqlalchemy) (3.0.3)
+Requirement already satisfied: colorama in d:\lib\site-packages (from click>=8.1.3->flask>=2.2.5->flask-sqlalchemy) (0.4.6)
+Requirement already satisfied: MarkupSafe>=2.0 in d:\lib\site-packages (from Jinja2>=3.1.2->flask>=2.2.5->flask-sqlalchemy) (2.1.1)
+Downloading flask_sqlalchemy-3.1.1-py3-none-any.whl (25 kB)
+Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 6.1 MB/s eta 0:00:00
+Using cached blinker-1.7.0-py3-none-any.whl (13 kB)
+Downloading werkzeug-3.0.2-py3-none-any.whl (226 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 7.0 MB/s eta 0:00:00
+Installing collected packages: Werkzeug, blinker, flask, flask-sqlalchemy
+  Attempting uninstall: Werkzeug
+    Found existing installation: Werkzeug 2.2.2
+    Uninstalling Werkzeug-2.2.2:
+      Successfully uninstalled Werkzeug-2.2.2
+  Attempting uninstall: flask
+    Found existing installation: Flask 2.2.2
+    Uninstalling Flask-2.2.2:
+      Successfully uninstalled Flask-2.2.2
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+tensorflow-intel 2.13.0 requires typing-extensions<4.6.0,>=3.6.6, but you have typing-extensions 4.7.1 which is incompatible.
+Successfully installed Werkzeug-3.0.2 blinker-1.7.0 flask-3.0.3 flask-sqlalchemy-3.1.1
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip

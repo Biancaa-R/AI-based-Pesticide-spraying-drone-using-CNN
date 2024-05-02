@@ -1,0 +1,236 @@
+C:\Users\Biancaa. R\flask app>python
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import db from flask_1
+  File "<stdin>", line 1
+    import db from flask_1
+              ^^^^
+SyntaxError: invalid syntax
+>>> from flask_1 import db
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 9, in <module>
+    db=SQLAlchemy(app)
+       ^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 278, in __init__
+    self.init_app(app)
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 374, in init_app
+    engines[key] = self._make_engine(key, options, app)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 665, in _make_engine
+    return sa.engine_from_config(options, prefix="")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\engine\create.py", line 820, in engine_from_config
+    return create_engine(url, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "D:\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\engine\create.py", line 615, in create_engine
+    (cargs_tup, cparams) = dialect.create_connect_args(u)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\dialects\sqlite\pysqlite.py", line 583, in create_connect_args
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Invalid SQLite URL: sqlite://site.db
+Valid SQLite URL forms are:
+ sqlite:///:memory: (or, sqlite://)
+ sqlite:///relative/path/to/file.db
+ sqlite:////absolute/path/to/file.db
+>>> from flask_1 import db
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 11, in <module>
+    class User(db.Model):
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 16, in User
+    password=db.Column(db.string(60),nullable=False)
+                       ^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 1008, in __getattr__
+    raise AttributeError(name)
+AttributeError: string
+>>> from flask_1 import db
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 22, in <module>
+    class Post(db.Model):
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 23, in Post
+    id=db.Colum(db.Integer,primary_key=True)
+       ^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 1008, in __getattr__
+    raise AttributeError(name)
+AttributeError: Colum
+>>> from flask_1 import db
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 22, in <module>
+    class Post(db.Model):
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 25, in Post
+    date_posted=db.Column(db.Date,nullable=False,default=datetime.utcnow);
+                                                         ^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+>>> from flask_1 import db
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 21, in <module>
+    class Post(db.Model):
+  File "C:\Users\Biancaa. R\flask app\flask_1.py", line 24, in Post
+    date_posted=db.Column(db.Date,nullable=False,default=datetime.utcnow)
+                                                         ^^^^^^^^
+NameError: name 'datetime' is not defined
+>>> from flask_1 import db
+>>> db.create_all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 900, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 871, in _call_for_binds
+    engine = self.engines[key]
+             ^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 687, in engines
+    app = current_app._get_current_object()  # type: ignore[attr-defined]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\werkzeug\local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+>>> app.app_context()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'app' is not defined
+>>> clear
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'clear' is not defined
+>>> clr
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'clr' is not defined. Did you mean: 'chr'?
+>>> from flask_1 import db
+>>> db.create_all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 900, in create_all
+    self._call_for_binds(bind_key, "create_all")
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 871, in _call_for_binds
+    engine = self.engines[key]
+             ^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\extension.py", line 687, in engines
+    app = current_app._get_current_object()  # type: ignore[attr-defined]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\werkzeug\local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+>>> with app.app_context():
+...     db.create_all()
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'app' is not defined
+>>> from flask_1 import app
+>>> with app.app_context():
+...     db.create_all()
+...
+>>> from flask_1 import User,Post
+>>> user_1=User(username='Biancaa',email='abc@gmail.com',password='hello')
+>>> db.session.add(user_1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Lib\site-packages\sqlalchemy\orm\scoping.py", line 378, in add
+    return self._proxied.add(instance, _warn=_warn)
+           ^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\orm\scoping.py", line 197, in _proxied
+    return self.registry()
+           ^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+          ^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\werkzeug\local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+>>> with app.app_context():
+...     db.session.add(user_1)
+...
+>>> with app.app_context():
+...     db.session.commit()
+...
+>>> User.query.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Lib\site-packages\flask_sqlalchemy\model.py", line 23, in __get__
+    cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\orm\scoping.py", line 220, in __call__
+    sess = self.registry()
+           ^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\sqlalchemy\util\_collections.py", line 632, in __call__
+    key = self.scopefunc()
+          ^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\flask_sqlalchemy\session.py", line 111, in _app_ctx_id
+    return id(app_ctx._get_current_object())  # type: ignore[attr-defined]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Lib\site-packages\werkzeug\local.py", line 508, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.
+>>> with app.app_context():
+...     user.query.all()
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'user' is not defined. Did you mean: 'User'?
+>>> with app.app_context():
+...     User.query.all()
+...
+[]
+>>> user_1=User(username='Biancaa',email='abc@gmail.com',password='hello')
+>>> with app.app_context():
+...     db.session.add(user_1)
+... with app.app_context():
+  File "<stdin>", line 3
+    with app.app_context():
+    ^^^^
+SyntaxError: invalid syntax
+>>> with app.app_context():
+...     db.session.add(user_1)
+...
+>>> with app.app_context():
+...     db.session.commit()
+...
+>>> with app.app_context():
+...     User.query.all()
+...
+[]
+>>> user_1=User(username='Biancaa',email='abc@gmail.com',password='hello')
+>>>     with app.app_context():
+  File "<stdin>", line 1
+    with app.app_context():
+IndentationError: unexpected indent
+>>>         db.session.add(user)
+  File "<stdin>", line 1
+    db.session.add(user)
+IndentationError: unexpected indent
+>>> with app.app_context():
+...     db.session.add(user_1)
+...     db.session.commit()
+...
+>>> with app.app_context():
+...     User.query.all()
+...
+[User('Biancaa,'abc@gmail.com','default.jpg')]
