@@ -1,5 +1,9 @@
 # AI enabled Pesticide-spraying-drone
 
+Website hosted for the posts uploading a community for the farmers:
+
+http://biancaa2004.pythonanywhere.com/
+
 Datasets used for training:
 
 1.  https://www.kaggle.com/datasets/meetnagadia/images-of-mango-leaves
