@@ -4,13 +4,17 @@ Website hosted for the posts uploading a community for the farmers:
 
 http://biancaa2004.pythonanywhere.com/
 
-Datasets used for training:
+<b> Datasets used for training:</b>
 
 1.  https://www.kaggle.com/datasets/meetnagadia/images-of-mango-leaves
 
 2.  https://www.kaggle.com/datasets/aryashah2k/mango-leaf-disease-dataset
 
 3.  https://www.kaggle.com/datasets/shravanatirtha/coconut-leaf-dataset-for-pest-identification
+
+<b> ONNX Model, Tensorflow lite model: </b>
+
+https://drive.google.com/drive/folders/1B1XEHrnEp75FmyDfWRUhraYk_XAHeJOG?usp=sharing
 
 Refferences used:
 
