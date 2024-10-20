@@ -16,7 +16,7 @@ http://biancaa2004.pythonanywhere.com/
 
 https://drive.google.com/drive/folders/1B1XEHrnEp75FmyDfWRUhraYk_XAHeJOG?usp=sharing
 
-Refferences used:
+References used:
 
 1. compression of onnx: https://pypi.org/project/scs4onnx/
    
@@ -35,7 +35,7 @@ Literature survey sources:
    
 
 
-   Refferences for future development:
+   References for future development:
 
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9343827
 
